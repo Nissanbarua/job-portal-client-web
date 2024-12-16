@@ -1,12 +1,22 @@
 import { motion } from "motion/react";
+import team1 from "../../assets/Banner/team1.jpg";
+import team2 from "../../assets/Banner/team2.jpg";
 const Banner = () => {
   return (
     <div className="hero bg-base-200 min-h-96">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="flex-1">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-            className="max-w-sm rounded-lg shadow-2xl"
+        <div className="flex-1 justify-items-end">
+          <motion.img
+            animate={{ y: [50, 80, 50] }}
+            transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+            src={team1}
+            className="max-w-sm w-72 rounded-t-3xl rounded-br-3xl border-l-4 border-b-4 border-blue-500 shadow-2xl"
+          />
+          <motion.img
+            animate={{ x: [100, 130, 100] }}
+            transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+            src={team2}
+            className="max-w-sm w-72 rounded-t-3xl rounded-bl-3xl border-r-4 border-b-4 border-blue-500 shadow-2xl"
           />
         </div>
         <div className="flex-1">
